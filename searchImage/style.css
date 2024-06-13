@@ -84,11 +84,11 @@ form{
     color:#231f2cf0;
     padding:10px 20px;
     text-align:center;
-    display:block; /*! type of display*/
+    /*display:block; /*! type of display*/
     margin: 30px auto;
     border-radius:5px;
     cursor:pointer;
-    /* display:none; */
+    display:none;
 }
 
 /*! how to do a responsiv  */
