@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            display: flex;
+            align-items:center;height: 100vh;
+            justify-content: center;
+            background: url("./bicyclette_raphael.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom center;
+            background-position:center;
+        }
+        .chronometre{
+            background: transparent;
+            border: 1px solid green;
+            backdrop-filter: blur(5px);
+            box-shadow: 4px 3px 5px  rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+        }
+        .time{
+            margin:auto;
+            width: 100%;
+            border: 1px solid rgba(39, 2, 19, 0.966);
+            border-radius: 5px;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom:20px;
+            span{
+                font-size: 1.6rem;
+                font-weight: bold;
+                padding: 5px;
+                font-family: 'Courier New';
+            }
+        }
+        .controls{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            button{
+                background-color: rgba(8, 179, 108, 0.596);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 9px;
+                border: 1px solid;
+                letter-spacing: 3px;
+                font-size: 1rem;
+                transition: 0.4s;
+                cursor: pointer;
+            }
+            button:hover{
+                transform: scale(0.9);
+            }
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chrono</title>
+</head>
+<body>
+    <div class="chronometre">
+        <div class="time">
+            <span>0 h</span>:
+            <span>0 min</span>:
+            <span>0 s</span>:
+            <span>0 ms</span>
+        </div>
+        <div class="controls">
+            <button id="start" onclick="start()">Start</button>
+            <button id="stop" onclick="_stop()">Stop</button>
+            <button id="reset" onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <script>
+        // data source
+        let sp,btn_start,btn_stop,t,ms,s,mn,h;
+
+        // get the data source
+        window.onload = function(){
+            sp = document.getElementsByTagName('span');
+            btn_start = document.getElementById('start');
+            btn_stop = document.getElementById('stop');
+            t;
+            ms =0,s=0,mn=0,h=0;
+        }
+
+        // mettre en place le compteur
+        function update_chromo(){
+            ms +=1;
+            if(ms==10){
+                ms = 0;
+                s += 1;
+            }
+            if(s==60){
+                s = 0;
+                mn +=1;
+            }
+            if(mn==60){
+                mn = 0;
+                h +=1;
+            }
+            sp[0].innerHTML = h + 'h';
+            sp[1].innerHTML = mn + 'min';
+            sp[2].innerHTML = s + 's';
+            sp[3].innerHTML = ms + 'ms';
+        }
+
+        // mettre en place le bouton du start
+        function start(){
+            t = setInterval(update_chromo,100);
+            btn_start.disabled = true;
+        }
+        // mettre en place le bouton du stop
+        function _stop(){
+            clearInterval(t);
+            btn_start.disabled = false;
+        }
+
+        // initialiser les valeurs du compteur
+        function reset(){
+            clearInterval(t);
+            btn_start.disabled = false;
+            h=0,mn=0,s=0,ms=0;
+            sp[0].innerHTML = h + 'h';
+            sp[1].innerHTML = mn + 'min';
+            sp[2].innerHTML = s + 's';
+            sp[3].innerHTML = ms + 'ms';
+        }
+        /*
+            window.onload = function(){};
+            document.onload = function(){};
+            innerHTML =()...; 
+        */
+        // Tab :: console.log(document.getElementsByTagName('span'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 50vw;
+                height: 50vh;
+                border: 1px solid black;
+                border-radius: 10px;
+                #p0{
+                    color: red;
+                    visibility: hidden;
+                    transition: 0.9s;
+                }
+                img{
+                    width: 90%;
+                    height: 90%;
+                    border-radius: 10px;
+
+                    filter: grayscale(1); /*noir et blanc*/
+                    transition: 0.9s;
+                }
+            }
+            .img:hover{
+                img{
+                    filter: grayscale(0);
+                }
+                #p0{
+                    visibility: visible;
+                }
+                #p1{
+                    visibility: hidden;
+                }
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grayscal</title>
+</head>
+<body>
+    <div class="img">
+        <img src="./img.png" alt="img">
+        <p id="p1">filter: grayscale(1)</p>
+        <p id="p0">filter: grayscale(0)</p>
+    </div>
+</body>
+</html>
