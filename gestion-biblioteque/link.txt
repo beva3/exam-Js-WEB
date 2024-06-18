@@ -1,1 +1,25 @@
 https://github.com/beva3/exam-Js-WEB/tree/main/gestion-biblioteque
+
+exemple de book
+
+
+Sapiens : Une brève histoire de l'humanité par Yuval Noah Harari
+Homo Deus : Une brève histoire de demain par Yuval Noah Harari
+21 leçons pour le 21ème siècle par Yuval Noah Harari
+Le pouvoir des habitudes par Charles Duhigg
+L'homme en quête de sens par Viktor E. Frankl
+La peur de la mort par Irvin D. Yalom
+Penser, vite et lentement par Daniel Kahneman
+Le système solaire par Carl Sagan
+Un bref aperçu de l'histoire de presque tout par Bill Bryson
+Sapiens : Une bande dessinée par Yuval Noah Harari et Marijn van der Linden
+Le Seigneur des Anneaux par J.R.R. Tolkien
+Harry Potter par J.K. Rowling
+Le Guide du stoppeur galactique par Douglas Adams
+Cent ans de solitude par Gabriel García Márquez
+Tous les hommes sont mortels par Simone de Beauvoir
+Crime et Châtiment par Fiodor Dostoïevski
+Guerre et Paix par Léon Tolstoï
+1984 par George Orwell
+Animal Farm par George Orwell
+La Ferme des animaux par George Orwell

@@ -60,6 +60,7 @@ body{
 .producti-list{
     /* border: 1px solid rgba(29, 28, 28, 0.801); */
     background: linear-gradient(45deg, rgba(20, 17, 17, 0.904),rgba(5, 5, 153, 0.329));
+    align-items: flex-start;
     border-radius: 10px;
     height: 480px;
     overflow: auto;
