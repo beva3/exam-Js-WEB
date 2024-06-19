@@ -29,7 +29,11 @@ let book = (infoBook)=>{
     return div;
 
 }
+// const imgs = new Image();
+// imgs.src='../img';
+const imgs = FileReader("../img");
+// console.log(imgs);
 //TODO met div dans prds
 
-prds.appendChild(book(infoBook));
+// prds.appendChild(book(infoBook));
 console.log(prds);
