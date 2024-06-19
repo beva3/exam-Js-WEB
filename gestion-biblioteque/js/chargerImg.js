@@ -24,7 +24,6 @@ let book = (infoBook)=>{
     div.appendChild(a);
     //! add class
     div.classList.add('product');
-    img.classList.add('img');
     prds.appendChild(div);
     return div;
 
